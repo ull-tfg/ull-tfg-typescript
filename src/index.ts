@@ -1,8 +1,6 @@
 export { sayHello } from './hello-world'
 export { sayGoodbye } from './hello-world'
 
-export { default as sum } from './sum';
-export { default as subtract } from './subtract';
 export { kaiztenFormRules } from './kaizten-form-rules';
 export { http } from './kaizten-http';
 export { Either } from './kaizten-either';
