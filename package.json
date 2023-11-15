@@ -1,0 +1,41 @@
+{
+    "name": "@ull-tfg/ull-tfg-typescript",
+    "version": "1.0.0",
+    "description": "Library composed of TypeScript utilities",
+    "license": "UNLICENSED",
+    "keywords": [
+        "TypeScript",
+        "Package",
+        "Utilities"
+    ],
+    "author": {
+        "name": "Universidad de La Laguna",
+        "email": "cexposit@ull.edu.es"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ull-tfg/ull-tfg-typescript.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "bugs": {
+        "url": "https://github.com/ull-tfg/ull-tfg-typescript/issues"
+    },
+    "homepage": "https://github.com/ull-tfg/ull-tfg-typescript#readme",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "lint": "eslint './src/**/*.{js,ts,tsx}'",
+        "test": "jest",
+        "test:watch": "jest --watchAll",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "start": "npm link && nodemon",
+        "semantic-release": "semantic-release"
+    },
+    "files": [
+        "/dist"
+    ],
+    "dependencies": {}
+}
