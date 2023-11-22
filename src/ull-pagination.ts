@@ -1,4 +1,4 @@
-export enum KaiztenPagination {
+export enum UllPagination {
 
   PAGE = "page",
   SIZE = "size",

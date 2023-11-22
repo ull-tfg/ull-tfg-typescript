@@ -1,4 +1,4 @@
-export enum KaiztenHttpMethod {
+export enum UllHttpMethod {
   /**
    * The `CONNECT` method establishes a tunnel to the server identified by the
    * target resource.

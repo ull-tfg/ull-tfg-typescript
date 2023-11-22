@@ -138,7 +138,7 @@ const requiredFileRule = (
 }
 
 
-export const kaiztenFormRules = {
+export const UllFormRules = {
   requiredRule,
   requiredListRule,
   requiredSelectorRule,

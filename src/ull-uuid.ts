@@ -1,6 +1,6 @@
-import { simplify } from "./kaizten-string";
+import { simplify } from "./ull-string";
 
-export class KaiztenUUID {
+export class UllUUID {
 
   public static readonly REGULAR_EXPRESSION = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/;
   public static readonly ERROR_NOT_DEFINED = "UUID of the resource is not defined";
@@ -18,39 +18,39 @@ export class KaiztenUUID {
 
   private validate(value: string) {
     if (value === null) {
-      throw new Error(KaiztenUUID.ERROR_NOT_DEFINED);
+      throw new Error(UllUUID.ERROR_NOT_DEFINED);
     }
     value = simplify(value);
     const length = value.length;
     if (length === 0) {
-      throw new Error(KaiztenUUID.ERROR_EMPTY);
+      throw new Error(UllUUID.ERROR_EMPTY);
     }
-    if (length !== KaiztenUUID.LENGTH) {
-      throw new Error(KaiztenUUID.ERROR_LENGTH);
+    if (length !== UllUUID.LENGTH) {
+      throw new Error(UllUUID.ERROR_LENGTH);
     }
-    if (!KaiztenUUID.REGULAR_EXPRESSION.test(value)) {
-      throw new Error(KaiztenUUID.ERROR_WRONG_FORMAT);
+    if (!UllUUID.REGULAR_EXPRESSION.test(value)) {
+      throw new Error(UllUUID.ERROR_WRONG_FORMAT);
     }
   }
 
-  public equals(other: KaiztenUUID): boolean {
+  public equals(other: UllUUID): boolean {
     if (other == null) {
       return false;
     }
     return this.value === other.value;
   }
 
-  public static random(): KaiztenUUID {
+  public static random(): UllUUID {
     let value = Math.random().toString(9).substring(2, 2 + 8);
     value = value + "-" + Math.random().toString(9).substring(2, 2 + 4);
     value = value + "-" + Math.random().toString(9).substring(2, 2 + 4);
     value = value + "-" + Math.random().toString(9).substring(2, 2 + 4);
     value = value + "-" + Math.random().toString(9).substring(2, 2 + 12);
-    return new KaiztenUUID(value);
+    return new UllUUID(value);
   }
 
-  public from(value: string): KaiztenUUID {
-    return new KaiztenUUID(value);
+  public from(value: string): UllUUID {
+    return new UllUUID(value);
   }
 
   public getValue(): string {

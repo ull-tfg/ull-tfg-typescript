@@ -1,4 +1,4 @@
-export enum KaiztenHttpResponseStatusCode {
+export enum UllHttpResponseStatusCode {
   // Informative responses
   CONTINUE = 100,
   SWITCHING_PROTOCOL = 101,
