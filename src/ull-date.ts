@@ -8,6 +8,6 @@ const toString = (date: Date) => {
   return `${year}-${month}-${day} ${hour}:${minute}:${seconds}`;
 };
 
-export const kaiztenDate = {
+export const ullDate = {
   toString,
 };
