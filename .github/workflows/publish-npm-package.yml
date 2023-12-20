@@ -1,14 +1,19 @@
 name: Build and Publish Package to Github Packages
 
-# Action triggered when pushing in 'main' branch
+# Events that trigger the workflow
 on:
   push:
     branches:
       - main
   workflow_dispatch:      
 
+# Environment variables
+env:
+  NODE_VERSION: '16.x'
+  SCOPE: '@ull-tfg'
+
 jobs:
-  build-artifact:
+  build-package:
     runs-on: ubuntu-latest
     steps:
       # Checkout of the repository
@@ -16,28 +21,21 @@ jobs:
       # Set up Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: ${{ env.NODE_VERSION }}
       # Install dependencies
       - run: yarn install
       # Run tests
       #- run: yarn test
       # Build package
       - run: yarn build
-  publish-package:
-    needs: build-artifact
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    steps:
       # Checkout of the repository
-      - uses: actions/checkout@v3
+      #- uses: actions/checkout@v3
       # Set up Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: ${{ env.NODE_VERSION }}
           registry-url: https://npm.pkg.github.com/
-          scope: '@ull-tfg'
+          scope: ${{ env.SCOPE }}
       - run: |
           npm publish
         env:
