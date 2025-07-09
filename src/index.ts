@@ -11,5 +11,5 @@ export type {
     Unauthorized,
     NotFound
 } from './ull-data-error';
-export { UllGeolocationPoint } from './ull-geolocation-point';
+export { UllGeolocationPoint } from './geolocation/ull-geolocation-point';
 export { UllHttpResponseStatusCode } from './ull-http-response-status-code';
