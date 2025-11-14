@@ -45,7 +45,7 @@ export { randomUint8Array } from './uint8array/ull-uint8array';
 export type {
     ApiError, DataError, NotFound, Unauthorized, UnexpectedError
 } from './ull-data-error';
-export { UllDate } from './ull-date';
+export { ullDate } from './ull-date';
 export { Either } from './ull-either';
 export * from './ull-string';
 export { UllUUID } from './ull-uuid';
