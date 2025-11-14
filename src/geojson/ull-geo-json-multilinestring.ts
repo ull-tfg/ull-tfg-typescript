@@ -1,5 +1,5 @@
-import { UllsonGeometry } from './ull-geo-json-geometry';
-import { UllsonLineString } from './ull-geo-json-line-string';
+import { UllGeoJsonGeometry } from './ull-geo-json-geometry';
+import { UllGeoJsonLineString } from './ull-geo-json-line-string';
 
 /**
  * Represents a GeoJSON MultiLineString geometry.
